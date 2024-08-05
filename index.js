@@ -14,16 +14,18 @@ axios.get(url)
     // Maç bilgilerini çek
     const matches = [];
     $('.wf-card').each((index, element) => {
-      const date = $(element).find('.wf-label').text().trim();
-      const matchTime = $(element).find('.match-item-time').text().trim();
-      const teams = $(element).find('.match-item-vs').text().trim();
-      const stage = $(element).find('.match-item-event').text().trim();
+      const date = $(element).prev('.wf-label').text().trim();
+      $(element).find('.match-item').each((i, matchElement) => {
+        const matchTime = $(matchElement).find('.match-item-time').text().trim();
+        const teams = $(matchElement).find('.match-item-vs').text().trim();
+        const stage = $(matchElement).find('.match-item-event').text().trim();
 
-      matches.push({
-        date,
-        matchTime,
-        teams,
-        stage
+        matches.push({
+          date,
+          matchTime,
+          teams,
+          stage
+        });
       });
     });
 
