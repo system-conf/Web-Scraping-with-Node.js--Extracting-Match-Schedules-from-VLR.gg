@@ -18,7 +18,7 @@ This project demonstrates how to perform web scraping using Node.js to extract m
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/web-scraping-vlrgg.git
+    git clone https://github.com/system-conf/Web-Scraping-with-Node.js--Extracting-Match-Schedules-from-VLR.gg.git
     ```
 
 2. Navigate to the project directory:
